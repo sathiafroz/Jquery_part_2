@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=PT+Serif:400,700" rel="stylesheet">
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+    <!-- CSS link-->
+     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+     <link rel="stylesheet" type="text/css" href="css/style.css">
+     <link rel="stylesheet" type="text/css" href="css/media.css">
+
+    <title>Jquery part_2</title>
+  </head>
+  <body>
+    <section class="fadeout_on_toggle">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="touch_icon ">
+              <h1>1. Fade Out & To</h1>
+                  <!-- 1st ex -->
+                  <h2 id="fb">Facebook</h2>
+                  <button type="button" class="btn btn-primary" id="btn_1"><i class="fab fa-facebook-f"></i></button>
+                   <!-- 2nd ex -->
+                  <button type="button" class="btn btn-primary" id="btn-1"><i class="fab fa-facebook-f"></i></button>
+                  <!-- 3rd ex -->
+              <h1>2. Fade Toggle</h1>
+                  <h2 id="twtr">Twitter</h2>
+                  <button type="button" class="btn btn-primary" id="btn_2"><i class="fab fa-twitter"></i></button>
+                  <!-- 4th ex -->
+              <h1>3. Fade Out & In</h1>
+                  <h2 id="g_plus">Google plus</h2>
+                 <button type="button" class="btn btn-primary" id="btn_3"><i class="fab fa-google-plus-g"></i></button>
+                 <button type="button" class="btn btn-primary" id="btn-3"><i class="fab fa-google-plus-g"></i></button>
+                 <!-- 5th ex -->
+              <h1>4. Hide Selector</h1>
+                  <h3>Allah Bless My Mother</h3>
+                  <h3>Allah Bless My Father</h3>
+                  <h3>Allah Bless My Daughter</h3>
+                  <h3>Allah Bless My Family</h3>
+                  <button type="button" id="show" class="btn btn-danger">Show Your Wish</butto>
+                  <button type="button" id="show1" class="btn btn-danger">Showout Your click</button>
+                  <!-- 6th ex -->
+              <h1>5. Form Field Selectors</h1>    
+                  <form class="fn">
+                    <h4>First Name :</h4> <input type="text"  name="firstname" >
+                   <h4> Password :</h4> <input type="password" name="password">
+                  </form>
+                   <!-- 7th ex -->
+              <h1>6. This Selectors</h1> 
+
+                  <h5>this is Sathi</h5>
+                  <h5>this is Mahbuba</h5>
+                  <h5>this is Aysha</h5>
+                  <h5>this is Kasfia</h5>
+                  <h5>this is Ema</h5>
+                  <!-- 8th ex -->
+              <h1>7. Even | Odd | First | Last & Nth Element Selectors</h1>
+                  <ul class="list-unstyled">
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Photo Gallery</li>
+                    <li>Project</li>
+                    <li>Webmail</li>
+                    <li>Company Profile</li>
+                    <li>Contact Us</li>
+                  </ul>
+                  <!-- 9th ex -->
+              <h1>8. Even | Odd | First | Last & Nth Element Selectors</h1>    
+                  <div class="flip">Click</div>
+                  <div class="panel">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae eros eget tellus tristique bibendum. Donec rutrum sed sem quis venenatis. Proin viverra risus a eros volutpat tempor. In quis arcu et eros porta lobortis sit</div>
+            </div>
+          </div>
+        </div>
+      </div>          
+    </section>
+    <section class="animation-part">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+                  <!-- 10th ex -->
+            <div class="animation">
+                <h1>9. Start Animation</h1> 
+                  <button type="button" class="btn btn-danger id="btn_4">Start Animation</button>
+                  <div class="animation_1">
+                    <p>Jqurey Animation</p>
+                  </div>
+            </div>
+          </div>
+        </div>
+      </div>          
+    </section>
+
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>  
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <!-- <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> -->
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/style.js"></script>
+  <script>
+     $(document).ready(function(){
+       // 1st ex
+       $('#btn_1').click(function(){
+        $('#fb').fadeOut(2000);
+       });
+       // 2nd ex
+       $('#btn-1').click(function(){
+        $('#fb').fadeTo(2000,.9);
+       });
+        // 3rd ex
+       $('#btn_2').click(function(){
+        $('#twtr').fadeToggle(2000);
+       });
+       // 4th ex
+       $('#btn_3').click(function(){
+        $('#g_plus').fadeOut(2000);
+       });
+       // 4th ex
+       $('#btn-3').click(function(){
+        $('#g_plus').fadeIn(2000);
+       });
+       // 5th ex
+       $("h3").hide();
+        $("#show").click(function(){
+        $("h3:contains('Daughter')").fadeIn(2000);
+       });
+
+        $("h3").hide();
+        $("#show1").click(function(){
+        $("h3:contains('Daughter')").fadeOut(2000);
+       });
+      // 6th ex
+        $(":input:text").addClass("fn");
+        $(":input:password").addClass("fn");
+        // 7th ex
+       $("h5").click(function(){
+        $(this).hide("fast");
+      });
+       // 8th ex
+       $("li:odd").addClass("odd");
+       $("li:even").addClass("even");
+       $("li:first").addClass("first");
+       $("li:last").addClass("last");
+       $("li:eq(3)").addClass("nth");        
+       // 9th ex
+       $('.flip').click(function(){
+        $('.panel').slideToggle(3000);
+       });
+        // 10th ex
+        $('button').click(function(){
+        $('p').animate({
+          left: '250px',
+          opacity: '0.5',
+          height: '150px',
+          width: '150px'
+       });
+      });
+     });
+   </script>
+
+    </body>
+</html>
